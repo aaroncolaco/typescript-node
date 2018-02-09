@@ -1,12 +1,18 @@
 'use strict';
 
+import { Error, Success } from '../models/responses'
+
 const getAllUsers = (req, res) => {
-  return res.json({ "message": "Return all users" });
+  const returnData: Success = {
+    status: 200,
+    data: { message: "Return all users" }
+  };
+  return res.status(returnData.status).json(returnData);
 };
 
 
-const errorResponse = (res, message, error, status = 500) =>
-  res.status(status).json({ "status": status, "message": message, "error": error });
+const errorResponse = (res, message: string, error, status: number = 500) =>
+  res.status(status).json(<Error>{ status, message, error });
 
 
 export default {
