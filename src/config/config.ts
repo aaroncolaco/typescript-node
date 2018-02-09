@@ -15,6 +15,6 @@ const Config = {
     404: "Couldn't find the requested resource",
     500: "Sorry, something went wrong. This one is on us"
   }
-}
+};
 
 export default Config;

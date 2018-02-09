@@ -84,11 +84,11 @@ function onListening() {
 
 /**
  * stop server. for tests
-*/
+ */
 function stopServer() {
   server.close();
 }
 
 export {
   stopServer
-}
+};

@@ -1,7 +1,7 @@
 'use strict';
 
 import * as express from 'express';
-import Controller from './controller'
+import Controller from './controller';
 
 const router = express.Router();
 
